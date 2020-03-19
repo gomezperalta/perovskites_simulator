@@ -1,0 +1,29 @@
+COMPOUND: 001
+cuboctahedron_atom: Ca
+octahedron_atom: Ti
+vertex_atom: O
+cuboctahedron_frac: 1.0
+octahedron_frac: 1.0
+vertex_frac: 1.0
+maxdev: 0.2
+stepsize: 0.01
+
+COMPOUND: 002
+cuboctahedron_atom: Ca
+octahedron_atom: Ti
+vertex_atom: O
+cuboctahedron_frac: 1.0
+octahedron_frac: 1.0
+vertex_frac: 0.8
+maxdev: 0.2
+stepsize: 0.01
+
+COMPOUND: 003
+cuboctahedron_atom: Rb, Cs
+octahedron_atom: Mn, Nb
+vertex_atom: O, S
+cuboctahedron_frac: 0.3, 0.7
+octahedron_frac: 0.2, 0.8
+vertex_frac: 0.8, 0.2
+maxdev: 0.2
+stepsize: 0.01
