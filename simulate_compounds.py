@@ -71,28 +71,29 @@ def scan_nnoutputs(elements = [['Na'],['V'], ['O']],
                    compositions = [[1.0], [1.0],[1.0]], 
                    maxdev = 0.2, stepsize = 0.01, 
                    name = ''):
-	"""
-	This function assesses the probability to crystallize as a perovskite structure
-	among different lattice parameter. The perovskite structures are considered in the
-	aristotype form (space group No. 221). 
-	Besides, csv- and png- files are saved containing the probabilities against the
-	explored lattice parameters.
-	Parameters: 
-		elements: a list of list, which specifies the atoms located in the cuboctahedral,
-				octahedral and vertex sites.
-		compositions: a list of list, which indicates the ocupation fraction of each atom 
-				in the sites.
-		maxdev: float, maximum deviation from the calculated lattice parameter. The lattice
-				parameter is proposed to be the sum of the atomic radii of the atoms in the
-				octahedral and vertex sites. Default, 0.2.
-		stepsize: float, stepsize used to scan the perovskite probability among the range
-				defined by the maxdev. Default,  0.01.
-		name: string, the name for the saved files. If it is not given, the name will be
-				the formula of the simulated compound.
-	Returns:
-		y: Numpy array, containing the probabilies to crystallize as a perovskite structure.
-		scanned_latpar: Numpy array, containing the lattice parameter used to perform the simulation.
-	"""   
+    """
+    This function assesses the probability to crystallize as a perovskite structure
+    among different lattice parameter. The perovskite structures are considered in the
+    aristotype form (space group No. 221). 
+    Besides, csv- and png- files are saved containing the probabilities against the
+    explored lattice parameters.
+    Parameters: 
+    	elements: a list of list, which specifies the atoms located in the cuboctahedral,
+    			octahedral and vertex sites.
+    	compositions: a list of list, which indicates the ocupation fraction of each atom 
+    			in the sites.
+    	maxdev: float, maximum deviation from the calculated lattice parameter. The lattice
+    			parameter is proposed to be the sum of the atomic radii of the atoms in the
+    			octahedral and vertex sites. Default, 0.2.
+    	stepsize: float, stepsize used to scan the perovskite probability among the range
+    			defined by the maxdev. Default,  0.01.
+    	name: string, the name for the saved files. If it is not given, the name will be
+    			the formula of the simulated compound.
+    Returns:
+    	y: Numpy array, containing the probabilies to crystallize as a perovskite structure.
+    	scanned_latpar: Numpy array, containing the lattice parameter used to perform the simulation.
+    """   
+    
     scann = np.arange(1 - maxdev, 
                       1 + maxdev + stepsize, 
                       stepsize)
